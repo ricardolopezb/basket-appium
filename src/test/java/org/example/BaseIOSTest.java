@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseIOSTest {
-    public static void main(String[] args) throws MalformedURLException {
+    public static IOSDriver desiredCapabilities() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "16.4");
@@ -19,10 +19,10 @@ public class BaseIOSTest {
         capabilities.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 500000);
 
         capabilities.setCapability("commandTimeouts", "12000");
-        capabilities.setCapability(MobileCapabilityType.APP, "/Users/rick/faculty/aseca/appium-ios/src/test/java/org/example/basketmobile.app");
+        capabilities.setCapability(MobileCapabilityType.APP, "/Users/rick/faculty/aseca/appium-ios/src/test/java/org/example/basketmobile1.app");
 
         IOSDriver driver = new IOSDriver(new URL("http://localhost:4723"), capabilities);
-
+        return driver;
 
 
     }
