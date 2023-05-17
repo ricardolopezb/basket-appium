@@ -13,10 +13,8 @@ public class AppiumClickTest extends BaseIOSTest{
 
         HashMap<String, Object> scrollObject = new HashMap<>();
         scrollObject.put("direction", "down");
-        //scrollObject.put("value", "Kenny Smith");
 
         driver.executeScript("mobile:scroll", scrollObject);
-        //driver.findElementByAccessibilityId("Kenny Smith");
 
 
     }
